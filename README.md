@@ -48,3 +48,19 @@ This repository contains an implementation of a custom encryption and decryption
 To run the encryption script:
 ```bash
 python encrypter.py
+```
+
+To run the decryption script:
+```bash
+python decrypter.py
+```
+
+Ensure that the MQTT broker is running and accessible at the specified address and port.
+
+## Notes
+•	The system requires the password and the datetime of encryption to successfully decrypt the message.
+•	The MQTT broker address and port need to be correctly set in the scripts.
+
+## License
+This project is licensed under the MIT License.
+
