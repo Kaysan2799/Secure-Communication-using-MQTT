@@ -47,12 +47,12 @@ This repository contains an implementation of a custom encryption and decryption
 
 To run the encryption script:
 ```bash
-python encrypter.py
+python encrypter_MQTT.py
 ```
 
 To run the decryption script:
 ```bash
-python decrypter.py
+python decrypter_MQTT.py
 ```
 
 Ensure that the MQTT broker is running and accessible at the specified address and port.
