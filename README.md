@@ -23,6 +23,73 @@ This repository contains an implementation of a custom encryption and decryption
 * **Publisher:** Encrypts the message and publishes it to an MQTT broker.
 * **Subscriber:** Subscribes to the broker, receives the encrypted message, and decrypts it.
 
+# Setting Up MQTT
+To use the MQTT protocol for publishing and subscribing to messages, you'll need to install an MQTT broker and set it up. The most commonly used broker is Mosquitto. Here's how you can install and set it up on different platforms.
+
+## Installing Mosquitto MQTT Broker
+### On Ubuntu/Debian
+*Update package list:*
+
+```bash
+sudo apt update
+```
+
+#### Install Mosquitto:
+
+```bash
+sudo apt install -y mosquitto mosquitto-clients
+```
+
+#### Enable and start Mosquitto service:
+
+```bash
+sudo systemctl enable mosquitto
+sudo systemctl start mosquitto
+```
+
+#### Verify Mosquitto status:
+
+```bash
+sudo systemctl status mosquitto
+```
+
+### On Windows
+Download Mosquitto: Go to the Mosquitto download page and download the Windows installer.
+
+Install Mosquitto: Run the installer and follow the on-screen instructions.
+
+Run Mosquitto: You can start Mosquitto by running mosquitto.exe from the installation directory.
+
+## Configuring Mosquitto
+The default configuration file for Mosquitto is typically found at /etc/mosquitto/mosquitto.conf on Linux or C:\Program Files\mosquitto\mosquitto.conf on Windows. You can edit this file to customize your broker settings.
+
+### Basic Configuration
+To enable remote access and add basic security, you can modify the configuration file as follows:
+
+### Open the configuration file in a text editor:
+
+```bash
+sudo nano /etc/mosquitto/mosquitto.conf
+```
+
+### Add the following lines to enable password file authentication:
+
+conf
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+
+### Create a password file and add a user:
+
+```bash
+sudo mosquitto_passwd -c /etc/mosquitto/passwd yourusername
+```
+
+### Restart Mosquitto to apply changes:
+
+```bash
+sudo systemctl restart mosquitto
+```
+
 ## How to Use
 
 ### Encryption
