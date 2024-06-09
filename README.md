@@ -60,7 +60,7 @@ Install Mosquitto: Run the installer and follow the on-screen instructions.
 
 Run Mosquitto: You can start Mosquitto by running mosquitto.exe from the installation directory.
 
-## Configuring Mosquitto
+# Configuring Mosquitto
 The default configuration file for Mosquitto is typically found at /etc/mosquitto/mosquitto.conf on Linux or C:\Program Files\mosquitto\mosquitto.conf on Windows. You can edit this file to customize your broker settings.
 
 ### Basic Configuration
